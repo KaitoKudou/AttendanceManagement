@@ -15,6 +15,8 @@
 		4468C79B24D090CE00C6B0DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4468C79924D090CE00C6B0DC /* LaunchScreen.storyboard */; };
 		4468C7A624D090CE00C6B0DC /* AttendanceManagementAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4468C7A524D090CE00C6B0DC /* AttendanceManagementAppTests.swift */; };
 		4468C7B124D090CE00C6B0DC /* AttendanceManagementAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4468C7B024D090CE00C6B0DC /* AttendanceManagementAppUITests.swift */; };
+		4468C7C024D093B000C6B0DC /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4468C7BF24D093B000C6B0DC /* APIKit.framework */; };
+		4468C7C124D093B000C6B0DC /* APIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4468C7BF24D093B000C6B0DC /* APIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4468C7C224D093B000C6B0DC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4468C7C124D093B000C6B0DC /* APIKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4468C78B24D090C200C6B0DC /* AttendanceManagementApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AttendanceManagementApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4468C78E24D090C200C6B0DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +65,7 @@
 		4468C7AC24D090CE00C6B0DC /* AttendanceManagementAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AttendanceManagementAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4468C7B024D090CE00C6B0DC /* AttendanceManagementAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceManagementAppUITests.swift; sourceTree = "<group>"; };
 		4468C7B224D090CE00C6B0DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4468C7BF24D093B000C6B0DC /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4468C7C024D093B000C6B0DC /* APIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +101,7 @@
 				4468C7A424D090CE00C6B0DC /* AttendanceManagementAppTests */,
 				4468C7AF24D090CE00C6B0DC /* AttendanceManagementAppUITests */,
 				4468C78C24D090C200C6B0DC /* Products */,
+				4468C7BE24D093B000C6B0DC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +147,14 @@
 			path = AttendanceManagementAppUITests;
 			sourceTree = "<group>";
 		};
+		4468C7BE24D093B000C6B0DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4468C7BF24D093B000C6B0DC /* APIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +165,8 @@
 				4468C78724D090C200C6B0DC /* Sources */,
 				4468C78824D090C200C6B0DC /* Frameworks */,
 				4468C78924D090C200C6B0DC /* Resources */,
+				4468C7C224D093B000C6B0DC /* Embed Frameworks */,
+				4468C7C324D093F500C6B0DC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -253,6 +282,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4468C7C324D093F500C6B0DC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/APIKit.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4468C78724D090C200C6B0DC /* Sources */ = {
@@ -436,6 +486,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DX3FKMWYLL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AttendanceManagementApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -454,6 +508,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DX3FKMWYLL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AttendanceManagementApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
