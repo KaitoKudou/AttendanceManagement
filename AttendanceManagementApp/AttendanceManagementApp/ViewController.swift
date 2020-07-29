@@ -7,12 +7,22 @@
 //
 
 import UIKit
+import APIKit
 
 class ViewController: UIViewController {
+    private var api = FetchAttendanceInformationRequest()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        Session.send(api) { result in
+            switch result {
+            case .success(let response):
+                print(response)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 
 
