@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+struct AttendanceInformation: Codable {
+    var name: String
+    var owner: Owner
+    
+    struct Owner: Codable {
+        var login: String
+        var avatar_url: String
+    }
+}
