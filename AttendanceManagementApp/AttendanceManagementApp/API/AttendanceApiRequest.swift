@@ -7,3 +7,20 @@
 //
 
 import Foundation
+import APIKit
+
+protocol AttendanceApiRequest:Request {
+    
+}
+
+extension AttendanceApiRequest{
+    var baseURL:URL{
+        return URL(string: "https://api.github.com")! // ここは暫定
+    }
+}
+
+extension AttendanceApiRequest where Response : Decodable{
+    var dataParser: DataParser{
+        return DecodableDataParse()
+    }
+}

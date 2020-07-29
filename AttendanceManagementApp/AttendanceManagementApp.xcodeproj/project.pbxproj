@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4447D6FC24D1EA5600AAEF40 /* AttendanceInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4447D6FB24D1EA5600AAEF40 /* AttendanceInformation.swift */; };
+		4447D70124D1F3E400AAEF40 /* AttendanceApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4447D6FE24D1F3E400AAEF40 /* AttendanceApiRequest.swift */; };
+		4447D70224D1F3E400AAEF40 /* FetchAttendanceInformationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4447D6FF24D1F3E400AAEF40 /* FetchAttendanceInformationRequest.swift */; };
+		4447D70324D1F3E400AAEF40 /* DecodableDataParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4447D70024D1F3E400AAEF40 /* DecodableDataParse.swift */; };
 		4468C78F24D090C200C6B0DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4468C78E24D090C200C6B0DC /* AppDelegate.swift */; };
 		4468C79124D090C200C6B0DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4468C79024D090C200C6B0DC /* SceneDelegate.swift */; };
 		4468C79324D090C200C6B0DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4468C79224D090C200C6B0DC /* ViewController.swift */; };
@@ -51,6 +55,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4447D6FB24D1EA5600AAEF40 /* AttendanceInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceInformation.swift; sourceTree = "<group>"; };
+		4447D6FE24D1F3E400AAEF40 /* AttendanceApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendanceApiRequest.swift; sourceTree = "<group>"; };
+		4447D6FF24D1F3E400AAEF40 /* FetchAttendanceInformationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchAttendanceInformationRequest.swift; sourceTree = "<group>"; };
+		4447D70024D1F3E400AAEF40 /* DecodableDataParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodableDataParse.swift; sourceTree = "<group>"; };
 		4468C78B24D090C200C6B0DC /* AttendanceManagementApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AttendanceManagementApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4468C78E24D090C200C6B0DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4468C79024D090C200C6B0DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +102,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4447D6FD24D1F3E400AAEF40 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				4447D6FE24D1F3E400AAEF40 /* AttendanceApiRequest.swift */,
+				4447D6FF24D1F3E400AAEF40 /* FetchAttendanceInformationRequest.swift */,
+				4447D70024D1F3E400AAEF40 /* DecodableDataParse.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		4468C78224D090C200C6B0DC = {
 			isa = PBXGroup;
 			children = (
@@ -118,9 +136,11 @@
 		4468C78D24D090C200C6B0DC /* AttendanceManagementApp */ = {
 			isa = PBXGroup;
 			children = (
+				4447D6FD24D1F3E400AAEF40 /* API */,
 				4468C78E24D090C200C6B0DC /* AppDelegate.swift */,
 				4468C79024D090C200C6B0DC /* SceneDelegate.swift */,
 				4468C79224D090C200C6B0DC /* ViewController.swift */,
+				4447D6FB24D1EA5600AAEF40 /* AttendanceInformation.swift */,
 				4468C79424D090C200C6B0DC /* Main.storyboard */,
 				4468C79724D090CE00C6B0DC /* Assets.xcassets */,
 				4468C79924D090CE00C6B0DC /* LaunchScreen.storyboard */,
@@ -309,8 +329,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4447D6FC24D1EA5600AAEF40 /* AttendanceInformation.swift in Sources */,
 				4468C79324D090C200C6B0DC /* ViewController.swift in Sources */,
+				4447D70324D1F3E400AAEF40 /* DecodableDataParse.swift in Sources */,
+				4447D70124D1F3E400AAEF40 /* AttendanceApiRequest.swift in Sources */,
 				4468C78F24D090C200C6B0DC /* AppDelegate.swift in Sources */,
+				4447D70224D1F3E400AAEF40 /* FetchAttendanceInformationRequest.swift in Sources */,
 				4468C79124D090C200C6B0DC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
